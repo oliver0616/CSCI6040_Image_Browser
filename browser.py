@@ -8,11 +8,40 @@ from PIL import Image
 from PIL import ImageTk
 from tkinter import filedialog
 import cv2
+import sys
+
+'''
+args for command line
+'''
+args = sys.argv[1:]
+
+if args[0] == "-h" or args[0] == "--help" or args[0] == "--?":
+    print("print this message")
+    exit()
+elif args[0] == "run":
+    print("program started")
+elif args[0] == "--cols" or args[0] == "--c":
+    print("number of cols")
+    exit()
+elif args[0] == "--rows" or args[0] == "--r":
+    print("number of rows")
+    exit()
+elif args[0] == "directory" or args[0] == "--d":
+    print("/testImages")
+    exit()
+else :
+    print("no args")
+    exit()
+
+
 
 
 '''
 This function allow user to select a directory and display all the image file in the directory textbox
 '''
+
+
+
 def selectDirectory():
     global firstFlag
     global filePathList
