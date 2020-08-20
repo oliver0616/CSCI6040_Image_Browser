@@ -15,7 +15,7 @@ args for command line
 '''
 args = sys.argv[1:]
 
-if args[0] == "-h" or args[0] == "--help" or args[0] == "--?":
+if args[0] == "-h" or args[0] == "--help" or args[0] == "--?" or args[0] == "--usage":
     print("print this message")
     exit()
 elif args[0] == "run":
